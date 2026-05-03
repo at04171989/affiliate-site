@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精選產品推薦 | 科技生活</title>
+    <meta name="description" content="每日更新精選科技產品評測與推薦，助你搵到最啱嘅產品">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { background: linear-gradient(135deg, #1d1d1f, #515154); color: white; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; }
+        .article { background: white; border-radius: 16px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .article h2 { font-size: 1.5em; margin-bottom: 12px; color: #1d1d1f; }
+        .article p { color: #515154; margin-bottom: 16px; }
+        .article .date { font-size: 0.85em; color: #86868b; margin-bottom: 12px; }
+        .cta-btn { display: inline-block; background: #ff9900; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .cta-btn:hover { background: #e88b00; }
+        footer { text-align: center; padding: 40px 20px; color: #86868b; font-size: 0.9em; }
+        .disclaimer { background: #fff8e1; border-left: 4px solid #ff9900; padding: 12px 16px; margin: 20px 0; border-radius: 4px; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📱 精選產品推薦</h1>
+        <p>每日更新 — 用心揀選最好嘅產品畀你</p>
+    </header>
+    <div class="container">
+        <div class="disclaimer">⚠️ 本站部分連結為聯盟連結，如果你透過連結購買產品，我哋可能會獲得少量佣金。感謝你支持本站繼續營運！</div>
+        <div id="articles"></div>
+    </div>
+    <footer>
+        <p>© 2026 精選產品推薦 | Amazon Associates Program</p>
+        <p style="margin-top:8px;font-size:0.85em">As an Amazon Associate I earn from qualifying purchases.</p>
+    </footer>
+    <script>
+        const articles = [
+            {title: "2026年最佳無線耳機推薦", date: "2026-05-03", content: "喺2026年，無線耳機市場競爭激烈。經過詳細測試，我哋為你精選幾款性價比最高嘅選擇...", link: "https://www.amazon.com/dp/B0example1?tag=at04171989-20"},
+            {title: "提升工作效率必備工具 2026", date: "2026-05-02", content: "無論你係WFH定係辦公室工作，以下呢啲工具都可以幫你大大提升工作效率...", link: "https://www.amazon.com/dp/B0example2?tag=at04171989-20"}
+        ];
+        let html = '';
+        articles.forEach(a => { html += '<div class="article"><div class="date">' + a.date + '</div><h2>' + a.title + '</h2><p>' + a.content + '</p><a class="cta-btn" href="' + a.link + '" target="_blank" rel="noopener noreferrer">🔍 睇更多</a></div>'; });
+        document.getElementById('articles').innerHTML = html;
+    </script>
+</body>
+</html>
