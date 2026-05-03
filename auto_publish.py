@@ -60,6 +60,7 @@ run(f'git commit -m "Auto article - {date}"')
 if TOKEN:
     run(f"git push https://{USERNAME}:{TOKEN}@github.com/{USERNAME}/affiliate-site.git main")
 else:
+    # Try with embedded token in git config
     run("git push origin main")
 
 print(f"Published: {article['title']} - {date}")
