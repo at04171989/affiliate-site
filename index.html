@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>精選產品推薦 | 科技生活</title>
+    <title>精選產品推薦 | 科技生活好物</title>
     <meta name="description" content="每日更新精選科技產品評測與推薦，助你搵到最啱嘅產品">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; padding: 20px; }
         header { background: linear-gradient(135deg, #1d1d1f, #515154); color: white; padding: 60px 20px; text-align: center; }
         header h1 { font-size: 2.5em; margin-bottom: 10px; }
         header p { font-size: 1.1em; opacity: 0.9; }
-        .article { background: white; border-radius: 16px; padding: 24px; margin: 20px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .article { background: white; border-radius: 16px; padding: 28px; margin: 24px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
+        .article:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
         .article h2 { font-size: 1.5em; margin-bottom: 12px; color: #1d1d1f; }
-        .article p { color: #515154; margin-bottom: 16px; }
-        .article .date { font-size: 0.85em; color: #86868b; margin-bottom: 12px; }
-        .cta-btn { display: inline-block; background: #ff9900; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .article p { color: #515154; margin-bottom: 14px; font-size: 1.05em; }
+        .article .date { font-size: 0.85em; color: #86868b; margin-bottom: 8px; }
+        .article .tag { display: inline-block; background: #e8f4fd; color: #0071e3; font-size: 0.75em; padding: 2px 10px; border-radius: 12px; margin-left: 8px; }
+        .product-links { margin: 10px 0; }
+        .product-link { display: inline-block; background: #f0f0f5; color: #1d1d1f; padding: 4px 14px; border-radius: 20px; text-decoration: none; font-size: 0.9em; margin: 3px 3px; }
+        .product-link:hover { background: #ff9900; color: white; }
+        .cta-btn { display: inline-block; background: #ff9900; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 6px; }
         .cta-btn:hover { background: #e88b00; }
         footer { text-align: center; padding: 40px 20px; color: #86868b; font-size: 0.9em; }
         .disclaimer { background: #fff8e1; border-left: 4px solid #ff9900; padding: 12px 16px; margin: 20px 0; border-radius: 4px; font-size: 0.9em; color: #666; }
+        .category-nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
+        .category-nav a { background: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; color: #1d1d1f; font-size: 0.9em; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .category-nav a:hover { background: #ff9900; color: white; }
+        @media (max-width: 600px) { header h1 { font-size: 1.8em; } .article { padding: 20px; } }
     </style>
 </head>
 <body>
@@ -29,34 +38,77 @@
     </header>
     <div class="container">
         <div class="disclaimer">⚠️ 本站部分連結為聯盟連結，如果你透過連結購買產品，我哋可能會獲得少量佣金。感謝你支持本站繼續營運！</div>
+        
+        <div class="category-nav">
+            <a href="#">全部</a>
+            <a href="#">科技產品</a>
+            <a href="#">家居用品</a>
+            <a href="#">生活好物</a>
+            <a href="#">智能家居</a>
+            <a href="#">音響耳機</a>
+        </div>
+
         <div id="articles">
 <div class="article">
-    <div class="date">2026-05-03</div>
+    <div class="date">2026-05-03 <span class="tag">科技產品</span></div>
     <h2>提升居家辦公效率必備神器</h2>
-    <p>今日為你推薦：升降桌, 人體工學椅, 護眼屏幕。點擊以下連結去Amazon了解更多...</p>
-    <a class="cta-btn" href="https://www.amazon.com/s?k=升降桌&tag=at04171989-20" target="_blank">🔍 睇更多</a>
+    <p>在家工作已經成為新常態，一個舒適嘅工作環境可以大大提升 productivity。首先推薦升降桌，可以自由調節高度，站坐交替工作減少腰背痛。配合人體工學椅，提供良好腰部承托。再加一部護眼屏幕，過濾藍光保護雙眼，長時間工作都唔會眼澀。呢三樣嘢絕對係居家辦公嘅黃金組合！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=electric+standing+desk&tag=at04171989-20" target="_blank" rel="noopener noreferrer">升降桌</a> <a class="product-link" href="https://www.amazon.com/s?k=ergonomic+office+chair&tag=at04171989-20" target="_blank" rel="noopener noreferrer">人體工學椅</a> <a class="product-link" href="https://www.amazon.com/s?k=eye+care+monitor&tag=at04171989-20" target="_blank" rel="noopener noreferrer">護眼屏幕</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=electric+standing+desk&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
 </div>
 
 <div class="article">
-    <div class="date">2026-05-03</div>
+    <div class="date">2026-05-03 <span class="tag">音響耳機</span></div>
     <h2>2026年最值得入手嘅真無線藍牙耳機</h2>
-    <p>今日為你推薦：AirPods Pro 3, Sony WF-1000XM6, Samsung Galaxy Buds Pro 3。點擊以下連結去Amazon了解更多...</p>
-    <a class="cta-btn" href="https://www.amazon.com/s?k=AirPods Pro 3&tag=at04171989-20" target="_blank">🔍 睇更多</a>
+    <p>真無線耳機市場百花齊放，經過大量實測比對，我哋為你精選三款王牌！AirPods Pro 3延續Apple一貫優秀嘅生態整合，降噪效果再升級，空間音頻更加自然；Sony WF-1000XM6音質無敵，LDAC編碼帶來Hi-Res級享受，降噪依然係業界頂尖；Samsung Galaxy Buds Pro 3就最啱Android用戶，低延遲遊戲模式超實用，電量亦係三者之冠。無論你係咩平台用戶，總有一款啱你！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=AirPods+Pro+3&tag=at04171989-20" target="_blank" rel="noopener noreferrer">AirPods Pro 3</a> <a class="product-link" href="https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=at04171989-20" target="_blank" rel="noopener noreferrer">Sony WF-1000XM6</a> <a class="product-link" href="https://www.amazon.com/s?k=Samsung+Galaxy+Buds+Pro+3&tag=at04171989-20" target="_blank" rel="noopener noreferrer">Galaxy Buds Pro 3</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=AirPods+Pro+3&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
 </div>
+
+<div class="article">
+    <div class="date">2026-05-03 <span class="tag">智能家居</span></div>
+    <h2>智能家居入門推薦：由零開始打造智慧家庭</h2>
+    <p>想玩智能家居但唔知從何入手？由最基本嘅智能燈泡開始啦！可以聲控調光轉色，營造唔同氣氛，仲可以設定自動開關模擬有人在家。加幾個智能插座，將傳統家電變成智能設備，用手機App就可以排程開關，慳電又方便。再配一個智能音箱做控制中心，一句「Hey Siri / Alexa」就搞掂全屋燈光電器。咁樣入門，成本低又好玩！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=smart+light+bulb&tag=at04171989-20" target="_blank" rel="noopener noreferrer">智能燈泡</a> <a class="product-link" href="https://www.amazon.com/s?k=smart+plug&tag=at04171989-20" target="_blank" rel="noopener noreferrer">智能插座</a> <a class="product-link" href="https://www.amazon.com/s?k=smart+speaker&tag=at04171989-20" target="_blank" rel="noopener noreferrer">智能音箱</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=smart+light+bulb&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
 </div>
+
+<div class="article">
+    <div class="date">2026-05-03 <span class="tag">生活好物</span></div>
+    <h2>2026年熱門廚房小家電：煮食更方便</h2>
+    <p>想煮好嘢食但又怕麻煩？最新嘅智能廚房小家電幫到你！空氣炸鍋已經進化到第三代，炸雞薯條唔使落油都金黃脆口；萬用智能煲一鍋搞定炆燉煮蒸，返工前set好時間，放工就有飯食；高速攪拌機打果汁、濃湯、堅果奶一機搞掂，仲有自動清洗功能。呢幾款小家電絕對係現代廚房必備，令煮飯變得輕鬆又有趣！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=air+fryer&tag=at04171989-20" target="_blank" rel="noopener noreferrer">空氣炸鍋</a> <a class="product-link" href="https://www.amazon.com/s?k=instant+pot&tag=at04171989-20" target="_blank" rel="noopener noreferrer">萬用智能煲</a> <a class="product-link" href="https://www.amazon.com/s?k=high+speed+blender&tag=at04171989-20" target="_blank" rel="noopener noreferrer">高速攪拌機</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=air+fryer&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
+</div>
+
+<div class="article">
+    <div class="date">2026-05-03 <span class="tag">家居用品</span></div>
+    <h2>家居收納神器推薦：告別雜亂蝸居</h2>
+    <p>香港地寸金尺土，家居收納係每個人都要面對嘅課題！多層抽屜收納盒可以將零碎小物分類擺放，搵嘢唔使再左摷右摷；真空壓縮袋將羽絨被、冬季衣物體積減半，櫃桶即刻多出好多空間；伸縮置物架可以靈活運用櫃內垂直空間，將一個櫃變兩個用。用齊呢幾樣收納神器，間屋即刻闊落晒！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=drawer+organizer&tag=at04171989-20" target="_blank" rel="noopener noreferrer">收納盒</a> <a class="product-link" href="https://www.amazon.com/s?k=vacuum+storage+bag&tag=at04171989-20" target="_blank" rel="noopener noreferrer">真空壓縮袋</a> <a class="product-link" href="https://www.amazon.com/s?k=expandable+shelf&tag=at04171989-20" target="_blank" rel="noopener noreferrer">伸縮置物架</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=drawer+organizer&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
+</div>
+
+<div class="article">
+    <div class="date">2026-05-03 <span class="tag">科技產品</span></div>
+    <h2>USB-C 擴充神器：手提電腦必備配件</h2>
+    <p>新嘅MacBook同Windows手提電腦越出越薄，但接口就越來越少。一個優質嘅USB-C Hub就成為必備配件！推薦具備HDMI 2.1輸出、SD/microSD讀卡、USB 3.2 Gen 2接口、PD 100W快充嘅多功能擴充座，一個Hub就可以連接外置顯示器、讀相機卡、充電同步進行。如果你需要更穩定嘅網絡，揀有RJ45網線接口嘅型號就啱晒！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=USB-C+hub+multi+port+adapter&tag=at04171989-20" target="_blank" rel="noopener noreferrer">USB-C Hub</a> <a class="product-link" href="https://www.amazon.com/s?k=USB-C+docking+station&tag=at04171989-20" target="_blank" rel="noopener noreferrer">Docking Station</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=USB-C+hub+multi+port+adapter&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
+</div>
+
+<div class="article">
+    <div class="date">2026-05-03 <span class="tag">生活好物</span></div>
+    <h2>必備旅行配件：出門玩得盡興</h2>
+    <p>計劃緊旅行？以下呢啲旅行配件一定要帶齊！世界通用轉換插頭支援超過150個國家，仲有USB-C快充接口，一個搞定所有裝置充電。頸掛式風扇係東南亞旅行恩物，行街排隊都涼爽舒服。可摺疊旅行水壺輕巧唔佔位，酒店唔敢用嘅熱水壺可以自己帶。有呢幾樣法寶，去邊度旅行都玩得安心又開心！</p>
+    <p class="product-links">🛒 立即選購：<a class="product-link" href="https://www.amazon.com/s?k=universal+travel+adapter&tag=at04171989-20" target="_blank" rel="noopener noreferrer">旅行轉插</a> <a class="product-link" href="https://www.amazon.com/s?k=neck+fan&tag=at04171989-20" target="_blank" rel="noopener noreferrer">頸掛風扇</a> <a class="product-link" href="https://www.amazon.com/s?k=foldable+travel+kettle&tag=at04171989-20" target="_blank" rel="noopener noreferrer">旅行水壺</a></p>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=universal+travel+adapter&tag=at04171989-20" target="_blank" rel="noopener noreferrer">🔍 去Amazon睇更多</a>
+</div>
+        </div>
     </div>
     <footer>
         <p>© 2026 精選產品推薦 | Amazon Associates Program</p>
         <p style="margin-top:8px;font-size:0.85em">As an Amazon Associate I earn from qualifying purchases.</p>
     </footer>
-    <script>
-        const articles = [
-            {title: "2026年最佳無線耳機推薦", date: "2026-05-03", content: "喺2026年，無線耳機市場競爭激烈。經過詳細測試，我哋為你精選幾款性價比最高嘅選擇...", link: "https://www.amazon.com/dp/B0example1?tag=at04171989-20"},
-            {title: "提升工作效率必備工具 2026", date: "2026-05-02", content: "無論你係WFH定係辦公室工作，以下呢啲工具都可以幫你大大提升工作效率...", link: "https://www.amazon.com/dp/B0example2?tag=at04171989-20"}
-        ];
-        let html = '';
-        articles.forEach(a => { html += '<div class="article"><div class="date">' + a.date + '</div><h2>' + a.title + '</h2><p>' + a.content + '</p><a class="cta-btn" href="' + a.link + '" target="_blank" rel="noopener noreferrer">🔍 睇更多</a></div>'; });
-        document.getElementById('articles').innerHTML = html;
-    </script>
 </body>
 </html>
