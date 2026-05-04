@@ -38,18 +38,11 @@ with open(f"{REPO_DIR}/index.html", "r") as f:
 # Insert new article at top of #articles div
 old = '<div id="articles">'
 new = f'<div id="articles">{article_html}'
-content = content.replace(old, new)
-
-# Keep only latest 20 articles
-import re
-articles_found = re.findall(r'<div class="article">.*?</div>\s*</div>', content, re.DOTALL)
-if len(articles_found) > 20:
-    # Keep first 20
-    first_article = content.index('<div class="article">')
-    last_20th = content.index('<div class="article">', first_article)
-    for _ in range(20):
-        last_20th = content.index('<div class="article">', last_20th + 1) if '<div class="article">' in content[last_20th+1:] else last_20th
-    # This needs more care... for now just write
+if old in content:
+    content = content.replace(old, new)
+else:
+    print("ERROR: Could not find #articles div")
+    exit(1)
 
 with open(f"{REPO_DIR}/index.html", "w") as f:
     f.write(content)
@@ -58,9 +51,9 @@ with open(f"{REPO_DIR}/index.html", "w") as f:
 run("git add .")
 run(f'git commit -m "Auto article - {date}"')
 if TOKEN:
-    run(f"git push https://{USERNAME}:{TOKEN}@github.com/{USERNAME}/affiliate-site.git main")
+    push_url = f"https://{USERNAME}:{TOKEN}@github.com/{USERNAME}/affiliate-site.git"
+    run(f"git push {push_url} main")
 else:
-    # Try with embedded token in git config
     run("git push origin main")
 
 print(f"Published: {article['title']} - {date}")
